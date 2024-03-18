@@ -145,8 +145,8 @@ rails s
 Tests can be ran against different versions of Rails like so:
 
 ```
-BUNDLE_GEMFILE=spec/gemfiles/rails-7 bundle install
-BUNDLE_GEMFILE=spec/gemfiles/rails-7 bundle exec rspec spec
+BUNDLE_GEMFILE=spec/gemfiles/rails-7.0 bundle install
+BUNDLE_GEMFILE=spec/gemfiles/rails-7.0 bundle exec rspec spec
 ```
 
 Feel free to open issues or send pull requests.
