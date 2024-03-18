@@ -92,6 +92,7 @@ module RecurringSelectHelper
     def recurring_select_html_options(html_options)
       html_options = html_options.stringify_keys
       html_options["class"] = (html_options["class"].to_s.split + ["recurring_select"]).join(" ")
+      html_options["data-url-root"] = Rails.application.config.action_controller.relative_url_root
       html_options
     end
   end

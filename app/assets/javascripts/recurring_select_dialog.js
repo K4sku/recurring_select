@@ -1,7 +1,6 @@
-//= require utils
-//= require defaults
+import { on, off, trigger, css, serialize } from './utils'
 
-class RecurringSelectDialog {
+export class RecurringSelectDialog {
   constructor(recurring_selector) {
     this.config = this.constructor.config
     this.cancel = this.cancel.bind(this);
@@ -186,7 +185,8 @@ class RecurringSelectDialog {
     if (!(this.current_rule.hash != null && this.current_rule.hash.rule_type != null)) { return; }
     this.current_rule.hash['week_start'] = this.config.texts["first_day_of_week"];
 
-    const url = `<%= Rails.application.config.action_controller.relative_url_root %>/recurring_select/translate/${this.config.texts["locale_iso_code"]}`
+    let urlRoot = document.body.dataset.urlRoot;
+    let url = `${urlRoot}/recurring_select/translate/${this.config.texts["locale_iso_code"]}`
     const headers = { 'X-Requested-With' : 'XMLHttpRequest', 'Content-Type' : 'application/x-www-form-urlencoded' }
     const body = serialize(this.current_rule.hash)
     console.log(this.current_rule.hash, body)
@@ -441,7 +441,3 @@ class RecurringSelectDialog {
     return str;
   }
 }
-
-RecurringSelectDialog.config = defaultConfig
-
-window.RecurringSelectDialog = RecurringSelectDialog

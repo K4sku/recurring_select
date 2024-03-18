@@ -1,20 +1,20 @@
-function css(el, styles) {
+export function css(el, styles) {
   for (let rule in styles) {
     el.style[rule] = styles[rule]
   }
 }
 
-function trigger(el, eventName) {
+export function trigger(el, eventName) {
   el.dispatchEvent(new CustomEvent(eventName))
 }
 
-function isPlainObject(obj) {
+export function isPlainObject(obj) {
   return obj && obj.toString() === "[object Object]"
 }
 
-const eventHandlerRefsExpando = '__recurring_select_events'
+export const eventHandlerRefsExpando = '__recurring_select_events'
 
-function on(el, events, sel, handler) {
+export function on(el, events, sel, handler) {
   let eventHandler = sel
   if (handler) {
     eventHandler = (e) => {
@@ -35,7 +35,7 @@ function on(el, events, sel, handler) {
   })
 }
 
-function off(el, events) {
+export function off(el, events) {
   const types = events.trim().split(/ +/)
 
   el[eventHandlerRefsExpando] = (el[eventHandlerRefsExpando] || [])
@@ -48,7 +48,7 @@ function off(el, events) {
     })
 }
 
-function serialize(params, prefix) {
+export function serialize(params, prefix) {
   const query = Object.keys(params).map((key) => {
     const value  = params[key];
 

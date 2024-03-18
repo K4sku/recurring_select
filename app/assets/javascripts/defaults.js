@@ -1,4 +1,4 @@
-const defaultConfig = {
+export const defaultConfig = {
   options: {
     monthly: {
       show_week: [true, true, true, true, false, false]

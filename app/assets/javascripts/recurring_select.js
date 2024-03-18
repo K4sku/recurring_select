@@ -1,5 +1,9 @@
-//= require recurring_select_dialog
-//= require_self
+import RecurringSelectDialog from './recurring_select_dialog'
+import { defaultConfig } from "./defaults";
+
+RecurringSelectDialog.config = defaultConfig
+
+window.RecurringSelectDialog = RecurringSelectDialog
 
 document.addEventListener("DOMContentLoaded", () => {
   document.addEventListener("focusin", (e) => {
