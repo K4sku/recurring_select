@@ -1,4 +1,4 @@
-import RecurringSelectDialog from './recurring_select_dialog'
+import { RecurringSelectDialog } from './recurring_select_dialog'
 import { defaultConfig } from "./defaults";
 
 RecurringSelectDialog.config = defaultConfig

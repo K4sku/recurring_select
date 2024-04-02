@@ -1,3 +1,11 @@
+# This fork
+
+* Compile SCSS to CSS
+* Remove sass-rails dependency
+* Change JS to ES6 export syntax
+* Remove jquery-mobile support
+* Remove french support
+
 # 4.0.0 / upcoming
 
 * [BREAKING-CHANGE] Drop support for Rails < 6.1
@@ -72,4 +80,3 @@ constant (thanks @fourseven)
 # 1.0.0 / 2013-04-16
 
 * First public release
-
