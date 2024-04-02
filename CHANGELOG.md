@@ -5,6 +5,8 @@
 * Change JS to ES6 export syntax
 * Remove jquery-mobile support
 * Remove french support
+* Remove JS nad CSS assets from app folder
+* Remove sprockets dependency
 
 # 4.0.0 / upcoming
 
